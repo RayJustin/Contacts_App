@@ -1,29 +1,23 @@
 $('document').ready(function(){
 
-
-
+$('form').on('submit', function(event){
+	event.preventDefault();
+	var contact = createObject();
+	console.log(contact.firstname);
+}); 
 
 });
 
-function getContact() {
 
-var firstName = 
-	$('#firstname').val();
-var lastName =
-	$('#lastname').val();
-	return (firstName + " " + lastName);
-}
-// When I use return, the text output in the console is RED and when I use
-// console.log the text is BLACK. Why?
+function createObject() {
+	var fields = $(':input').serializeArray();
+	var contact = {};
+	for (i=0; i<fields.length; i++) {
+ 		contact[fields[i].name] = fields[i].value;
+	}
+	return contact;
+};
 
-var contact = {
-		name: "",
-		phone: "",
-		address: ""
-	};
 
-$('submitButton').on('click', function(){
-	console.log();
-}); 
 
 
