@@ -53,5 +53,8 @@ hr {
 	padding: 10px;
 }
 
+.contactList {
+	list-style: decimal;
+}
 
 
