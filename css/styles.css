@@ -57,4 +57,8 @@ hr {
 	list-style: decimal;
 }
 
+.contactList > li:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
 
